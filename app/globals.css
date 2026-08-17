@@ -17,6 +17,10 @@
   }
 }
 
+@theme {
+    --font-monsieur: var(--font-monsieur);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

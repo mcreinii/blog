@@ -3,9 +3,10 @@ import { Monsieur_La_Doulaise } from 'next/font/google'
 import './globals.css'
 import NavigationBar from './components/NavigationBar'
 
-const font = Monsieur_La_Doulaise({
+const monsieur = Monsieur_La_Doulaise({
     weight: '400',
     subsets: ['latin'],
+    variable: '--font-monsieur',
 })
 
 export const metadata: Metadata = {
@@ -15,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
     return (
-        <html lang='en' className={`${font.className} h-full antialiased`}>
-            <body className='min-h-full'>
+        <html lang='en' className={`${monsieur.variable} h-full antialiased`}>
+            <body className='min-h-full font-monsieur'>
                 <NavigationBar />
                 {children}
             </body>
